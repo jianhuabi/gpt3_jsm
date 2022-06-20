@@ -1,16 +1,17 @@
-apiVersion: carto.run/v1alpa1
+apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: gpt3_jsm
+  name: gpt3-jsm
   labels:
-    apps.tanzu.vmware.com/workload-type: web
-    app.kubernetes.io/part-of: gpt3_jsm
+    app.kubernetes.io/part-of: gpt3-jsm
+    apps.tanzu.vmware.com/workload-type: web-dev
     apps.tanzu.vmware.com/has-tests: true
+    # networking.knative.dev/visibility: cluster-local
   annotations:
     autoscaling.knative.dev/minScale: '1'
 spec:
   source:
     git:
-      url: git-source-url
+      url: 'https://github.com/jianhuabi/gpt3_jsm'
       ref:
         branch: main
