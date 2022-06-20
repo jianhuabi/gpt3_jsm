@@ -5,7 +5,7 @@ metadata:
   description: Tanzu NodeJS Web App
   tags:
     - app-accelerator
-    - js
+    - uiux
     - nodejs
     - web
     - tanzu
@@ -25,6 +25,6 @@ metadata:
       icon: chat
       title: Slack Channel
 spec:
-  type: front-end
+  type: service
   lifecycle: experimental
   owner: uiux-team
